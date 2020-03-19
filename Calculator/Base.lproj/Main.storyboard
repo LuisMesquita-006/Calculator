@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eBP-HI-ruL">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3hu-LV-mrC" userLabel="Display">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1R-bj-uJa" userLabel="Result">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="tSO-q4-yHq"/>
+                                                    <constraint firstAttribute="height" constant="200" id="tUF-NI-6Wb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="-10"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="tUF-NI-6Wb"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="77"/>
+                                                    <mask key="constraints">
+                                                        <exclude reference="tSO-q4-yHq"/>
+                                                        <include reference="tUF-NI-6Wb"/>
+                                                    </mask>
+                                                </variation>
+                                            </button>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olj-Ss-Hg4">
+                                                <rect key="frame" x="0.0" y="82" width="375" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Yoe-84-HeH"/>
+                                                    <constraint firstAttribute="height" constant="40" id="gPW-bD-uWZ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="y67-qB-Rbt"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Yoe-84-HeH"/>
+                                                        <exclude reference="gPW-bD-uWZ"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <mask key="constraints">
+                                                        <include reference="Yoe-84-HeH"/>
+                                                    </mask>
+                                                </variation>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Yhi-S7-hrR"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="iag-yT-5nj"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="iag-yT-5nj"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="Yhi-S7-hrR"/>
+                                                <include reference="iag-yT-5nj"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="46d-bD-OH1" userLabel="Conversion">
+                                        <rect key="frame" x="0.0" y="122.66666666666666" width="375" height="0.0"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="FhZ-Ph-y9a" userLabel="Units">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="0.0"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O7-DT-klS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="0.0"/>
+                                                        <color key="backgroundColor" red="0.08054617257257668" green="0.11299242801786402" blue="0.18147208121827407" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        <state key="normal" title="EUR">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                        </variation>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VR-e5-HzI">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="0.0"/>
+                                                        <color key="backgroundColor" red="0.080546172570000005" green="0.11299242800000001" blue="0.1814720812" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        <state key="normal" title="USD">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                        </variation>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lun-4C-ffc" userLabel="Convert ">
+                                                <rect key="frame" x="188" y="0.0" width="187" height="0.0"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK2-bo-XVB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="0.0"/>
+                                                        <color key="backgroundColor" red="0.1058823529" green="0.1647058824" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        <state key="normal" title="Convert">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                                        </variation>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="GJr-xp-NUk"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="GJr-xp-NUk"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="GJr-xp-NUk"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QkQ-of-qym" userLabel="Pad">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="611"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ixp-6X-HxM" userLabel="1st Row">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="121.33333333333333"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQf-d6-BWp" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" red="0.4181868655" green="0.1368053558" blue="0.109360136" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="clearAllButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHF-y9-U2m"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anc-gp-kbn" userLabel="D" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" red="0.4181868655" green="0.1368053558" blue="0.109360136" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="AC">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aft-qV-VTb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66V-AA-aGl" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="%">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="percentageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86k-0H-3sZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-M2-AVD" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="282" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="÷">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getOperatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4R-eo-2qE"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-d9-FZv" userLabel="2nd Row">
+                                                <rect key="frame" x="0.0" y="122.33333333333331" width="375" height="121.33333333333331"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-ib-b0O" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XlA-Tk-ZHr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD6-QG-UGI" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YRn-ij-pZa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mR-6n-gOY" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RCA-kD-7o6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S42-Hq-m3c" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="282" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="x">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getOperatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftf-L1-J1V"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JPZ-f6-W3b" userLabel="3rd Row">
+                                                <rect key="frame" x="0.0" y="244.66666666666666" width="375" height="121.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlA-Ru-jb3" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="121.66666666666667"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNS-4r-bHg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmP-R4-ffO" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="121.66666666666667"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Urh-RX-XG6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ba-YC-2cx" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="121.66666666666667"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7iq-dK-sWF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEl-df-beV" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="282" y="0.0" width="93" height="121.66666666666667"/>
+                                                        <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getOperatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bf-pW-2Yw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rAB-9C-Q1s" userLabel="4th Row">
+                                                <rect key="frame" x="0.0" y="367.33333333333337" width="375" height="121.33333333333331"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-Vm-Qkx" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNn-2t-p3k"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Km-Mr-RAB" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Br-Qz-zcU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euW-2Y-hM2" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TM1-SD-hVi"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-Ht-ujB" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="282" y="0.0" width="93" height="121.33333333333333"/>
+                                                        <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="getOperatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGj-3p-Bvb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YWz-XJ-f8E" userLabel="5th Row">
+                                                <rect key="frame" x="0.0" y="489.66666666666657" width="375" height="121.33333333333331"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="AMz-qE-nLv" userLabel="Dot Zero">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="121.33333333333333"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZT9-rX-ilC" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93" height="121.33333333333333"/>
+                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                                <state key="normal" title=".">
+                                                                    <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wu-SE-pFT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btD-W6-hCg" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="94" y="0.0" width="93" height="121.33333333333333"/>
+                                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="getNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koT-HT-0La"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-ER-lUe" userLabel="Equal Sign">
+                                                        <rect key="frame" x="188" y="0.0" width="187" height="121.33333333333333"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQW-ba-W1W" customClass="DesignableButton" customModule="Calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="121.33333333333333"/>
+                                                                <color key="backgroundColor" red="0.4996430838" green="0.29806736160000002" blue="0.089229690700000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                                                <state key="normal" title="=">
+                                                                    <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="equalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l3L-vs-NFH"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11764857920000001" green="0.1176450476" blue="0.11764576290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11764857920000001" green="0.1176450476" blue="0.11764576290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eBP-HI-ruL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QFF-rA-7aB"/>
+                            <constraint firstItem="eBP-HI-ruL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YSM-AN-evc"/>
+                            <constraint firstItem="eBP-HI-ruL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z10-rx-jd0"/>
+                            <constraint firstItem="eBP-HI-ruL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tEI-mf-qeL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="formulaTxtFld" destination="olj-Ss-Hg4" id="PsZ-qZ-Mag"/>
+                        <outlet property="resultBtnFld" destination="N1R-bj-uJa" id="BqT-tD-bIX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" id="j6T-Pu-Y0p" userLabel="5th Row">
+                    <rect key="frame" x="0.0" y="0.0" width="137.33333333333331" height="272.66666666666669"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2b-7G-N9l">
+                            <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="67.333333333333329"/>
+                            <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                            <state key="normal" title=".">
+                                <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-NZ-zY8">
+                            <rect key="frame" x="0.0" y="68.333333333333314" width="137.33333333333334" height="67.666666666666686"/>
+                            <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                            <state key="normal" title="0">
+                                <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVF-iz-XkG">
+                            <rect key="frame" x="0.0" y="137" width="137.33333333333334" height="67.333333333333314"/>
+                            <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVt-DX-mop">
+                            <rect key="frame" x="0.0" y="205.33333333333334" width="137.33333333333334" height="67.333333333333343"/>
+                            <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                            <state key="normal" title="-">
+                                <color key="titleColor" red="0.46898591519999999" green="0.6837169528" blue="0.9804224372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="7a9-DY-NZ8"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="392.75362318840581" y="170.75892857142856"/>
+        </scene>
+    </scenes>
+</document>
