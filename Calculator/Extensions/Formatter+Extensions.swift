@@ -14,6 +14,7 @@ extension Formatter {
 		formatter.groupingSeparator = " "
 		formatter.numberStyle = .decimal
 		formatter.locale = .current
+		formatter.decimalSeparator = ","
 		return formatter
 	}()
 }
