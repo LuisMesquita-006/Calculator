@@ -140,6 +140,7 @@ class Calculator {
 		if let sNum = Double(number2) {
 			number2 = String(fNum * sNum/(100))
 			resultNumber = fNum * sNum/100
+			tempNumber = number2
 		} else {
 			number1 = String(fNum/100)
 			resultNumber = fNum/100

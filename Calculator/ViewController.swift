@@ -37,6 +37,7 @@ class ViewController: UIViewController {
 		calculator.formula += sender.currentTitle!
 //		calculator.operatorExistent = true
 		calculator.operationChoosen(value: sender.currentTitle!)
+		
 		if calculator.displayNumber == "0" || calculator.displayNumber == "" {
 			resultBtnFld.setTitle(display(number:calculator.tempNumber), for: .disabled)
 		} else {
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
 	
 	@IBAction func equalButtonPressed(_ sender: UIButton) {
 		calculator.numbersAndResult()
-		calculator.calculate()
+//		calculator.calculate()
 		resultBtnFld.setTitle(display(number:calculator.displayNumber), for: .disabled)
 	}
 	
