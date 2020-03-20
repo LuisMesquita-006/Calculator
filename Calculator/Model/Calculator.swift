@@ -105,6 +105,7 @@ class Calculator {
 		number2 = ""
 		operation = nil
 		operatorExistent = true
+		number2 = ""
 	}
 	
 	func clearAll() {
