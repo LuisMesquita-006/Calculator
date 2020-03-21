@@ -81,16 +81,16 @@ class Calculator {
 		guard let fNum = Double(number1), let sNum = Double(number2) else { return }
 		switch operation {
 			case .divide:
-				result = (fNum / sNum).formattedWithSeparator
+				result = String(fNum / sNum)
 				resultNumber = fNum / sNum
 			case .multiply:
-				result = (fNum * sNum).formattedWithSeparator
+				result = String(fNum * sNum)
 				resultNumber = fNum * sNum
 			case .subtract:
-				result = (fNum - sNum).formattedWithSeparator
+				result = String(fNum - sNum)
 				resultNumber = fNum - sNum
 			case .add:
-				result = (fNum + sNum).formattedWithSeparator
+				result = String(fNum + sNum)
 				resultNumber = fNum + sNum
 			default:
 				return

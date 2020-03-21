@@ -11,10 +11,13 @@ import Foundation
 extension Formatter {
 	static let withSeparator: NumberFormatter = {
 		let formatter = NumberFormatter()
-		formatter.groupingSeparator = " "
 		formatter.numberStyle = .decimal
+		formatter.generatesDecimalNumbers = true
+//		formatter.groupingSeparator = " "
+		formatter.usesGroupingSeparator = true
 		formatter.locale = .current
-		formatter.decimalSeparator = ","
+//		formatter.locale = Locale(identifier: "pt_PT")
+//		formatter.decimalSeparator = "."
 		return formatter
 	}()
 }
